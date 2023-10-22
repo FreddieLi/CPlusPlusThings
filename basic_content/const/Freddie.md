@@ -1,0 +1,27 @@
+1. non-const instance can access non-const member function and const member function. and will prioritize the non-const memeber function over const memeber function.
+2. const member function can only call onther const member function  
+
+
+```cpp
+class Apple {
+public:
+  Apple(int i);
+  static int ap;
+  static const int apple_number;
+  void take(int num) const;
+  int add(int num);
+  int add(int num) const;
+  int getCount() const;
+};
+
+main()
+{
+  Apple a(2);
+  // call int add(int num) over int add(int num) const;
+  a.add(10); 
+  const Apple b(3);  // const instance can only call const member function. 
+  b.add(100); // only can call int add(int num) const;
+
+}
+
+```
