@@ -1,3 +1,5 @@
+
+[reference](https://cs.pynote.net/sf/c/cpp/202204055/)  
 C++对象初始化成员变量，推荐用初始化列表这种语法来实现。对于const修饰的成员变量，以及没有定义zero-parameter constructor的class type成员变量，只能用这种方式初始化，在初始化列表中调用基类的构造函数比较自然。
 
 ```cpp

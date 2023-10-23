@@ -1,6 +1,7 @@
-1. non-const instance can access non-const member function and const member function. and will prioritize the non-const memeber function over const memeber function.
+1. non-const instance can call non-const member function and const member function. and will prioritize the non-const memeber function over const memeber function.
 2. const member function can only call onther const member function  
-
+3. const member function can read const/nonconst variables, but can't write nonconst/const variables.
+4. non const member function can read const/nonconst variable, can only modify nonconst variables.
 
 ```cpp
 class Apple {
