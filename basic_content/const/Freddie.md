@@ -1,7 +1,14 @@
 1. non-const instance can call non-const member function and const member function. and will prioritize the non-const memeber function over const memeber function.
-2. const member function can only call onther const member function  
+2. const member function can only call onther const member function, while non const member function can call other non-const member function(priortized) and const member.  
 3. const member function can read const/nonconst variables, but can't write nonconst/const variables.
 4. non const member function can read const/nonconst variable, can only modify nonconst variables.
+5. C++11 and later version, we can assign value to const variable in class directly, no need to use member initializer list.  
+```cpp
+class a {
+  public:
+  const int constVar = 10;
+}
+```
 
 ```cpp
 class Apple {
